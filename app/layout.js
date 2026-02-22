@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { ModeToggle } from "@/components/darkmode";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { Inter, Poppins } from "next/font/google";
 
 /* ✅ FAST GOOGLE FONTS */
@@ -126,7 +126,7 @@ export default function RootLayout({ children }) {
 
           {/* ANALYTICS */}
           <Analytics />
-          <SpeedInsights />
+          
         </ThemeProvider>
 
         {/* ✅ STRUCTURED DATA (BOOST GOOGLE SEO) */}
