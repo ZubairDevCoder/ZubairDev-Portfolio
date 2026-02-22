@@ -102,7 +102,7 @@ export default function RootLayout({ children }) {
         name="google-site-verification"
         content="v8MZvG8XOHVTu6bd_307APE4IvEwf7MXBp1eO0945iI"
       />
-      <body className="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <body className="antialiased bg-black text-white">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -110,7 +110,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           {/* HEADER */}
-          <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur border-b border-gray-200 dark:border-gray-700">
+          <header className="sticky top-0 z-50 bg-gray-800/90 backdrop-blur border-b :border-gray-700">
             <Navbar />
           </header>
 

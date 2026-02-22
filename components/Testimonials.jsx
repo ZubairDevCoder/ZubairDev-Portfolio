@@ -7,14 +7,14 @@ import Image from "next/image";
 const MH2 = motion.h2;
 const MDiv = motion.div;
 
-// Testimonials data (Name added directly)
+// Testimonials data
 const testimonials = [
   {
     name: "Ali Khan",
     role: "Software Engineer at HCL Technologies",
     review:
       "Gaurav is a visionary developer. His attention to detail and creativity blew us away. Our project was a massive success because of him.",
-    image: "/m1.png",
+    image: "/m1.png", // public folder
   },
   {
     name: "Sara Ahmed",
@@ -41,7 +41,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-6 py-20 md:m-auto mt-45">
+    <section className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-6 py-20 mt-50">
       <MH2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -72,10 +72,7 @@ export default function Testimonials() {
             </div>
 
             <p className="text-gray-200 italic mb-4">"{testi.review}"</p>
-
-            {/* Real Name */}
             <h3 className="text-lg font-semibold">{testi.name}</h3>
-
             <p className="text-sm text-gray-400">{testi.role}</p>
           </MDiv>
         ))}
