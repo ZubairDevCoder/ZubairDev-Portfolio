@@ -8,21 +8,21 @@ const experiences = [
   {
     role: "Full Stack Developer",
     company: "Self-Employed (Remote)",
-    duration: "2024 – Present",
+    duration: "2026 – Present",
     description:
       "Designing and deploying scalable SaaS applications using Next.js, React, and Firebase. Building secure authentication systems, optimized admin dashboards, and performance-focused architectures with clean, production-ready code.",
   },
   {
     role: "Frontend Developer",
     company: "CodeAlpha",
-    duration: "2024 – 2025",
+    duration: "2025 – 2026",
     description:
       "Engineered responsive and high-performance web interfaces using React and Tailwind CSS. Integrated REST APIs, enhanced UI/UX consistency, and improved application speed through structured component optimization.",
   },
   {
     role: "Automation & Chatbot Developer",
     company: "Digital Freelance Projects",
-    duration: "2023 – Present",
+    duration: "2024 – Present",
     description:
       "Developed intelligent chatbot automation systems using ManyChat to streamline lead generation and marketing workflows. Implemented conversion-driven automation funnels to improve customer engagement and digital growth.",
   },

@@ -14,28 +14,28 @@ const testimonials = [
     role: "Software Engineer at HCL Technologies",
     review:
       "Gaurav is a visionary developer. His attention to detail and creativity blew us away. Our project was a massive success because of him.",
-    image: "/m1.png", // public folder
+    image: "/men1.png", // public folder
   },
   {
     name: "Sara Ahmed",
     role: "UI/UX Designer at PixelWorks",
     review:
       "Working with Gaurav was an absolute pleasure. He brings design and code together like magic. Highly recommend him!",
-    image: "/w1.png",
+    image: "/women1.png",
   },
   {
     name: "Omar Rizvi",
     role: "Tech Manager at CodeEmpire",
     review:
       "From concept to execution, Gaurav handled everything flawlessly. His work ethic and innovation are unmatched.",
-    image: "/m2.png",
+    image: "/men2.png",
   },
   {
     name: "Ayesha Malik",
     role: "CTO at Innovate Labs",
     review:
       "Gaurav transformed our outdated platform into something modern and powerful. His skills are world-class.",
-    image: "/w2.png",
+    image: "/women2.png",
   },
 ];
 
