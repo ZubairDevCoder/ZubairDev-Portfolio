@@ -1,12 +1,14 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import CustomCursor from "@/components/CustomCursor";
-import MusicPlayer from "@/components/MusicPlayer";
+import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/darkmode";
-import { Inter, Poppins, Roboto } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import { ModeToggle } from "@/components/darkmode";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter, Poppins } from "next/font/google";
 
+/* ✅ FAST GOOGLE FONTS */
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -20,54 +22,69 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-roboto",
-  display: "swap",
-});
-
-/* ✅ SEO Optimized Metadata */
+/* ✅ STRONG SEO METADATA */
 export const metadata = {
-  metadataBase: new URL("https://yourdomain.com"), // 🔥 Apna domain dalna
+  metadataBase: new URL("https://zubair-dev-portfolio-pi.vercel.app"),
+
   title: {
-    default: "Muhammad Zubair | SaaS Full Stack Developer",
+    default: "Muhammad Zubair | Full Stack SaaS Developer",
     template: "%s | Muhammad Zubair",
   },
+
   description:
-    "Muhammad Zubair is a SaaS-focused Full Stack Developer & Automation Engineer specializing in scalable web applications using Next.js, React, and Tailwind CSS.",
+    "Muhammad Zubair is a Full Stack Developer specializing in SaaS platforms, admin dashboards, chatbots, and scalable web applications using Next.js, React, Firebase, and Tailwind CSS.",
+
   keywords: [
     "Muhammad Zubair",
+    "Zubair Dev",
     "Full Stack Developer",
-    "SaaS Developer",
     "Next.js Developer",
     "React Developer",
-    "Automation Engineer",
-    "Pakistan Developer",
+    "SaaS Developer",
+    "Portfolio Website",
+    "Pakistan Web Developer",
   ],
+
   authors: [{ name: "Muhammad Zubair" }],
   creator: "Muhammad Zubair",
+
   openGraph: {
-    title: "Muhammad Zubair | SaaS Full Stack Developer",
+    title: "Muhammad Zubair | Full Stack SaaS Developer",
     description:
-      "Building scalable SaaS platforms and automation systems using modern web technologies.",
-    url: "https://yourdomain.com",
+      "Explore the portfolio of Muhammad Zubair – building scalable SaaS platforms and production-ready web applications.",
+    url: "/",
     siteName: "Muhammad Zubair Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Zubair Portfolio",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Zubair | SaaS Full Stack Developer",
-    description: "Portfolio of Muhammad Zubair - Full Stack SaaS Developer.",
+    title: "Muhammad Zubair | Full Stack Developer",
+    description:
+      "Full Stack Developer specializing in SaaS, dashboards & modern web apps.",
+    images: ["/og-image.png"],
   },
+
+  verification: {
+    google: "googlee2480a318705e5c1", // 👈 yahan sirf code dalna
+  },
+
   robots: {
     index: true,
     follow: true,
   },
 };
 
-/* ✅ NEXT 16 FIX — Viewport Separate Export */
+/* ✅ VIEWPORT (NEXT 16 FIX) */
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -79,31 +96,56 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${poppins.variable} ${roboto.variable}`}
+      className={`${inter.variable} ${poppins.variable}`}
     >
-      <body className="text-white antialiased relative overflow-x-hidden animated-gradient">
+      <body className="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <CustomCursor />
-
-          <header>
+          {/* HEADER */}
+          <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur border-b border-gray-200 dark:border-gray-700">
             <Navbar />
           </header>
 
-          <main>{children}</main>
+          {/* MAIN */}
+          <main className="max-w-7xl mx-auto px-4 py-6">{children}</main>
 
-          <MusicPlayer />
+          {/* FOOTER */}
+          <Footer />
 
-          <div className="fixed bottom-6 right-6 z-50">
-            <ModeToggle />
-          </div>
+          {/* UI UTILITIES */}
+          <ModeToggle />
+          <Toaster position="top-center" />
 
-          <Toaster richColors position="top-center" />
+          {/* ANALYTICS */}
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
+
+        {/* ✅ STRUCTURED DATA (BOOST GOOGLE SEO) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Muhammad Zubair",
+              url: "https://zubair-dev-portfolio-pi.vercel.app",
+              jobTitle: "Full Stack Developer",
+              sameAs: [
+                "https://github.com/ZubairDevCoder",
+                "https://www.linkedin.com/in/zubair-dev-coder-11a02a3aa/",
+              ],
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelance",
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );
