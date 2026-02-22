@@ -98,6 +98,10 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${inter.variable} ${poppins.variable}`}
     >
+      <meta
+        name="google-site-verification"
+        content="v8MZvG8XOHVTu6bd_307APE4IvEwf7MXBp1eO0945iI"
+      />
       <body className="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <ThemeProvider
           attribute="class"
