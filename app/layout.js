@@ -115,18 +115,21 @@ export default function RootLayout({ children }) {
           </header>
 
           {/* MAIN */}
-          <main className="max-w-7xl mx-auto px-4 py-6">{children}</main>
+          <main className="max-w-7xl mx-auto">{children}</main>
 
           {/* FOOTER */}
           <Footer />
 
           {/* UI UTILITIES */}
-          <ModeToggle />
+
+          {/* Place this near the root of your app, e.g., inside layout or _app.js */}
+          <div className="fixed bottom-0 right-8 transform -translate-y-1/2 z-50">
+            <ModeToggle />
+          </div>
           <Toaster position="top-center" />
 
           {/* ANALYTICS */}
           <Analytics />
-          
         </ThemeProvider>
 
         {/* ✅ STRUCTURED DATA (BOOST GOOGLE SEO) */}

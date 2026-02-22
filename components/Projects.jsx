@@ -57,7 +57,7 @@ export default function Projects() {
         transition: "background-color 400ms ease",
       }}
     >
-      <div className="sticky top-0 h-100  md:h-screen flex flex-col items-center justify-center">
+      <div className="sticky top-0  h-screen flex flex-col items-center justify-center">
         <h2 className="text-3xl font-semibold md:mb-10 mb-5 ">My Projects</h2>
 
         <div className="relative w-full flex-1 flex items-center justify-center mb-10 ">

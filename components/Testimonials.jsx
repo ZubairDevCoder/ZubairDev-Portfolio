@@ -41,7 +41,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-6 py-20">
+    <section className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-6 py-20 md:m-auto mt-45">
       <MH2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

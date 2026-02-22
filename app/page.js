@@ -57,9 +57,6 @@ export default function Page() {
         </motion.h2>
         <Contact />
       </section>
-
-      {/* Footer can stay outside or wrapped in a section if needed */}
-      <Footer />
     </>
   );
 }
